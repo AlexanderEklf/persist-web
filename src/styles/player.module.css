@@ -1,0 +1,17 @@
+.mediaPlayer{
+    display: flex;
+    height: auto;
+    width: auto;
+    margin-top: 5rem;
+    /* padding-top:5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center; */
+}
+
+
+.reactPlayer {
+    position: relative
+}

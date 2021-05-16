@@ -5,6 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #2f4353; */
+  /* background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%); */
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 100%;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+::placeholder{
+  font-size: 18px;
 }
 
 code {

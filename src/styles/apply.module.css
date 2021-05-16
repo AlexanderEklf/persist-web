@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 32px;
+    height: 100vh;
+}
+
+.inputForm > textarea,input {
+    margin-bottom: 1.5rem;
+    width: 50%;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+.inputForm > textarea {
+    resize: none;
+}
+
+.inputForm > input{
+    height: 2rem;
+}
+
+.applyButton {
+    width: 100px;
+    height: 40px;
+}
+
+
+.inputForm>input::-webkit-input-placeholder:after {
+    content: '*';
+ }
+ 
+ .inputForm>input:-moz-placeholder:after { /* Firefox 18- */
+    content: '*'; 
+ }
+ 
+ .inputForm>input::-moz-placeholder:after {  /* Firefox 19+ */
+    content: '*';
+ }
+ 
+ .inputForm>input:-ms-input-placeholder:after {  
+    content: '*';
+ }
+
+ @media only screen and (max-width:1200px){
+    .inputForm > textarea,input {
+        width: 100%;
+    }
+ }
