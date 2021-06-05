@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/persist-web/static/css/main.c13ccbcb.chunk.css",
-    "main.js": "/persist-web/static/js/main.4978e07f.chunk.js",
-    "main.js.map": "/persist-web/static/js/main.4978e07f.chunk.js.map",
+    "main.js": "/persist-web/static/js/main.2f6f8c22.chunk.js",
+    "main.js.map": "/persist-web/static/js/main.2f6f8c22.chunk.js.map",
     "runtime-main.js": "/persist-web/static/js/runtime-main.8ce4588a.js",
     "runtime-main.js.map": "/persist-web/static/js/runtime-main.8ce4588a.js.map",
-    "static/js/2.81fec89f.chunk.js": "/persist-web/static/js/2.81fec89f.chunk.js",
-    "static/js/2.81fec89f.chunk.js.map": "/persist-web/static/js/2.81fec89f.chunk.js.map",
+    "static/js/2.09ff3a7d.chunk.js": "/persist-web/static/js/2.09ff3a7d.chunk.js",
+    "static/js/2.09ff3a7d.chunk.js.map": "/persist-web/static/js/2.09ff3a7d.chunk.js.map",
     "static/js/3.5027503d.chunk.js": "/persist-web/static/js/3.5027503d.chunk.js",
     "static/js/3.5027503d.chunk.js.map": "/persist-web/static/js/3.5027503d.chunk.js.map",
     "index.html": "/persist-web/index.html",
     "static/css/main.c13ccbcb.chunk.css.map": "/persist-web/static/css/main.c13ccbcb.chunk.css.map",
-    "static/js/2.81fec89f.chunk.js.LICENSE.txt": "/persist-web/static/js/2.81fec89f.chunk.js.LICENSE.txt",
+    "static/js/2.09ff3a7d.chunk.js.LICENSE.txt": "/persist-web/static/js/2.09ff3a7d.chunk.js.LICENSE.txt",
     "static/media/playercard.module.css": "/persist-web/static/media/discord.741e707e.png",
     "static/media/cover.e91ff8ca.png": "/persist-web/static/media/cover.e91ff8ca.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8ce4588a.js",
-    "static/js/2.81fec89f.chunk.js",
+    "static/js/2.09ff3a7d.chunk.js",
     "static/css/main.c13ccbcb.chunk.css",
-    "static/js/main.4978e07f.chunk.js"
+    "static/js/main.2f6f8c22.chunk.js"
   ]
 }
