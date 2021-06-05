@@ -1,6 +1,5 @@
 {
   "name": "persist-web",
-  "homepage": "http://AlexanderEklf.github.io/persist-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
