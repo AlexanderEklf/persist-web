@@ -5,6 +5,8 @@ import {wow} from "blizzard.js"
 import {useState, useEffect} from "react"
 import { settings } from 'cluster'
 import styles from "../styles/playercard.module.css";
+import useFetch from 'use-http'
+import discordLogo from "../assets/logos/discord.png";
 
 
 
@@ -22,55 +24,11 @@ const NAMESPACE = "profile-eu";
 
 const cid = process.env.REACT_APP_CLIENT_ID
 
-//https://eu.api.blizzard.com/profile/wow/character/twisting-nether/cr%C3%A9mal/appearance?namespace=profile-eu&locale=en_GB&access_token=EURyYcQkUMZFg6tqtBY6KfShJln4AZrgbW
-
-
-const fetchAppearence = async (characterName:string, accessToken:string) => {
-
-        const PROFILEREQUEST = `https://eu.api.blizzard.com/profile/wow/character/twisting-nether/${characterName}/appearance?namespace=profile-eu&locale=en_GB&access_token=${accessToken}`;
-
-        fetch(PROFILEREQUEST, {
-                method:"GET",
-        }).then(response=> response.json()).then(json=>json)
-
-
-}
-
-const fetchAvatar = async(characterName:string, accessToken:string) => {
-        //https://eu.api.blizzard.com/profile/wow/character/twisting-nether/ajey/character-media?namespace=profile-eu&locale=en_GB&access_token=EURyYcQkUMZFg6tqtBY6KfShJln4AZrgbW
-
-        const AVATARREQUEST = `https://eu.api.blizzard.com/profile/wow/character/twisting-nether/${characterName}/character-media?namespace=profile-eu&locale=en_GB&access_token=${accessToken}`
-
-        
-        return await fetch(AVATARREQUEST, {
-                method:"GET",
-        }).then(response=> response.json()).then(json=>json)
-}
-
-
-
-const fetchToken = async (id:string|undefined, secret:string|undefined)=>{
-        let headers = new Headers();
-        headers.append('Authorization', 'Basic ' + btoa(id + ":" + secret))
-        let body = new FormData();
-
-        body.append("grant_type","client_credentials");
-        const {access_token} = await fetch(ENDPOINT,{
-                method:"POST",
-                headers: headers,
-                body: body
-        }).then(response=> response.json()).then(json=>json)
-        console.log(access_token);
-        return access_token;
-
-        
-}
-
 interface Props{
         cardInfo:{
                 battleTag:string,
                 discordTag:string,
-                ingameName:string
+                ingameName:string,
         }
 }
 
@@ -79,36 +37,55 @@ interface Avatar {
         value:string
 }
 
-export const PlayerCard:React.FC<Props> = ({cardInfo}) => {
-        const[Avatars, setAvatars] = useState<Avatar[]>([]);
-        const [AccessToken, setAccessToken] = useState("");
-        const [isFetching, setFetching] = useState(true);
 
-        useEffect(() => {
-                const fetchData = async()=>{
-                        setFetching(true);
-                        const token = await fetchToken(CLIENT_ID,CLIENT_SECRET);
-                        setAccessToken(token);
-                        fetchAvatar(cardInfo.ingameName.toLowerCase(),token).then((fetched)=> {
-                                setAvatars(fetched.assets);
-                                setFetching(false);
-                        })
-                }
-                fetchData();
-                
-        },[])
-        
-        return (
-        <div className={styles.card}>
-                {isFetching ? (null) : (<div className={styles.avatar}><img style={{width:"100%"}} alt="Avatar" src={Avatars[2].value}/></div>)}
-                <div className={styles.container}>
-                        <h4>
-                                {cardInfo.ingameName}
-                        </h4>
-                        <p>Discord: {cardInfo.discordTag}</p>
-                        <p>Battlenet: {cardInfo.battleTag}</p>
+export const PlayerCard:React.FC<Props> = ({cardInfo}) => {
+
+        const copyToClipBoard = (text:string)=>{
+                var temp = document.createElement("textarea");
+                document.body.appendChild(temp);
+                temp.value = text;
+                temp.select();
+                document.execCommand("copy");
+
+                document.body.removeChild(temp);
+
+        }
+
+        var url= new URL(`/profile/wow/character/twisting-nether/${cardInfo.ingameName.toLowerCase()}/character-media`,"https://eu.api.blizzard.com");
+        var params={namespace:"profile-eu", locale:"en_GB"}
+       
+        url.search = new URLSearchParams(params).toString();
+
+        var {loading, error, data={}} = useFetch(url.toString(),{
+        },[]);
+
+        return (<>
+                {error && "Error"}
+                {loading && "Loading.."}
+                {!loading && 
+                <div className={styles.card}  style={{backgroundImage:`url(${data.assets[2].value})`, backgroundSize:"cover"}}>
+                        <div className={styles.cardContent}>
+                                <h2 className={styles.cardTitle}>
+                                        {cardInfo.ingameName}
+                                </h2>
+                                <div className={styles.cardBody}>
+                                        <p className={styles.battleTag}>
+                                                <button className={styles.link} onClick={()=>copyToClipBoard(cardInfo.battleTag)}>
+                                                        {cardInfo.battleTag}
+                                                </button>
+                                        </p>
+                                        <p className={styles.discord}>
+                                                <button className={styles.link} onClick={()=>copyToClipBoard(cardInfo.discordTag)}>
+                                                        {cardInfo.discordTag}
+                                                </button>
+                                        </p>
+                                </div>
+                                
+                        </div>
+
                 </div>
-        </div>
-        
+                }
+
+        </>
         );
 }

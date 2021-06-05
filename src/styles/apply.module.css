@@ -3,13 +3,14 @@
     flex-direction: column;
     margin: 32px;
     height: 100vh;
+    align-items: center;
 }
 
 .inputForm > textarea,input {
     margin-bottom: 1.5rem;
-    width: 50%;
     border: 0;
     border-bottom: 1px solid black;
+    width: 100%;
 }
 
 .inputForm > textarea {
@@ -20,6 +21,9 @@
     height: 2rem;
 }
 
+.inputForm > p{
+    position: relative;
+}
 .applyButton {
     width: 100px;
     height: 40px;
@@ -42,8 +46,9 @@
     content: '*';
  }
 
- @media only screen and (max-width:1200px){
+ /* @media only screen and (min-width:1200px){
     .inputForm > textarea,input {
         width: 100%;
+
     }
- }
+ } */
