@@ -9,7 +9,7 @@ interface Props {
 export const Footer:React.FC<Props> = () => {
         return (
                 <div className={styles.footer}>
-                    <h4>Footer</h4>
+                    <h4>Footer!</h4>
 
                 </div>
         );
