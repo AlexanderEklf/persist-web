@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/persist-web/static/css/main.21194a87.chunk.css",
-    "main.js": "/persist-web/static/js/main.67f06595.chunk.js",
-    "main.js.map": "/persist-web/static/js/main.67f06595.chunk.js.map",
+    "main.js": "/persist-web/static/js/main.ad574297.chunk.js",
+    "main.js.map": "/persist-web/static/js/main.ad574297.chunk.js.map",
     "runtime-main.js": "/persist-web/static/js/runtime-main.7e2b64aa.js",
     "runtime-main.js.map": "/persist-web/static/js/runtime-main.7e2b64aa.js.map",
     "static/js/2.28444913.chunk.js": "/persist-web/static/js/2.28444913.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.7e2b64aa.js",
     "static/js/2.28444913.chunk.js",
     "static/css/main.21194a87.chunk.css",
-    "static/js/main.67f06595.chunk.js"
+    "static/js/main.ad574297.chunk.js"
   ]
 }
