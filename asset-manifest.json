@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/persist-web/static/css/main.21194a87.chunk.css",
-    "main.js": "/persist-web/static/js/main.ad574297.chunk.js",
-    "main.js.map": "/persist-web/static/js/main.ad574297.chunk.js.map",
-    "runtime-main.js": "/persist-web/static/js/runtime-main.7e2b64aa.js",
-    "runtime-main.js.map": "/persist-web/static/js/runtime-main.7e2b64aa.js.map",
-    "static/js/2.28444913.chunk.js": "/persist-web/static/js/2.28444913.chunk.js",
-    "static/js/2.28444913.chunk.js.map": "/persist-web/static/js/2.28444913.chunk.js.map",
-    "static/js/3.17091300.chunk.js": "/persist-web/static/js/3.17091300.chunk.js",
-    "static/js/3.17091300.chunk.js.map": "/persist-web/static/js/3.17091300.chunk.js.map",
+    "main.css": "/persist-web/static/css/main.57561e72.chunk.css",
+    "main.js": "/persist-web/static/js/main.e5f01278.chunk.js",
+    "main.js.map": "/persist-web/static/js/main.e5f01278.chunk.js.map",
+    "runtime-main.js": "/persist-web/static/js/runtime-main.104455c3.js",
+    "runtime-main.js.map": "/persist-web/static/js/runtime-main.104455c3.js.map",
+    "static/js/2.7205a9b3.chunk.js": "/persist-web/static/js/2.7205a9b3.chunk.js",
+    "static/js/2.7205a9b3.chunk.js.map": "/persist-web/static/js/2.7205a9b3.chunk.js.map",
+    "static/js/3.287e74e8.chunk.js": "/persist-web/static/js/3.287e74e8.chunk.js",
+    "static/js/3.287e74e8.chunk.js.map": "/persist-web/static/js/3.287e74e8.chunk.js.map",
     "index.html": "/persist-web/index.html",
-    "static/css/main.21194a87.chunk.css.map": "/persist-web/static/css/main.21194a87.chunk.css.map",
-    "static/js/2.28444913.chunk.js.LICENSE.txt": "/persist-web/static/js/2.28444913.chunk.js.LICENSE.txt",
-    "static/media/playercard.module.css": "/persist-web/static/media/discord.741e707e.png",
-    "static/media/cover.e91ff8ca.png": "/persist-web/static/media/cover.e91ff8ca.png"
+    "static/css/main.57561e72.chunk.css.map": "/persist-web/static/css/main.57561e72.chunk.css.map",
+    "static/js/2.7205a9b3.chunk.js.LICENSE.txt": "/persist-web/static/js/2.7205a9b3.chunk.js.LICENSE.txt",
+    "static/media/playercard.module.css": "/persist-web/static/media/discord.741e707e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7e2b64aa.js",
-    "static/js/2.28444913.chunk.js",
-    "static/css/main.21194a87.chunk.css",
-    "static/js/main.ad574297.chunk.js"
+    "static/js/runtime-main.104455c3.js",
+    "static/js/2.7205a9b3.chunk.js",
+    "static/css/main.57561e72.chunk.css",
+    "static/js/main.e5f01278.chunk.js"
   ]
 }
